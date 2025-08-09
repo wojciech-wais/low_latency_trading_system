@@ -1,0 +1,29 @@
+# Build directories
+build/
+build-*/
+
+# Claude Code local settings
+.claude/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Compiled objects
+*.o
+*.a
+*.so
+*.out
+
+# Generated data scripts/temp files
+data/gen.*
+data/gen_cpp.*
+data/g2.py
+data/t.txt
