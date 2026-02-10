@@ -19,6 +19,10 @@ This is a **production-grade High-Frequency Trading simulator** built from scrat
   <span class="badge">Fixed-Point Math</span>
 </div>
 
+## Benchmark Machine
+
+Benchmarked on an **AMD Ryzen 9 7900X** (Zen 4, 12C/24T, 5.73 GHz boost) with **64 GB DDR5** RAM, running **Ubuntu 22.04 LTS** and compiled with **GCC 11.4** (`-O3 -march=native -flto`). See the [Performance](/performance/) page for full details.
+
 ## Highlights
 
 - **Six-stage pipeline** connected by lock-free SPSC ring buffers, each pinnable to a dedicated CPU core

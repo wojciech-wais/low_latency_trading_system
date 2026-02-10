@@ -26,6 +26,25 @@ All latency targets met or exceeded. The system achieves **1.6 &mu;s tick-to-tra
   </div>
 </div>
 
+## Benchmark Environment
+
+All measurements were taken on the following hardware under controlled conditions (no competing workloads):
+
+| Component | Specification |
+|-----------|--------------|
+| **CPU** | AMD Ryzen 9 7900X (12 cores / 24 threads, up to 5.73 GHz boost) |
+| **Architecture** | Zen 4, x86_64, AVX-512 |
+| **L1 Cache** | 384 KiB I + 384 KiB D (32 KiB per core) |
+| **L2 Cache** | 12 MiB (1 MiB per core) |
+| **L3 Cache** | 64 MiB (2 x 32 MiB CCDs) |
+| **RAM** | 64 GB DDR5 |
+| **OS** | Ubuntu 22.04.5 LTS, kernel 6.5.0-26-generic |
+| **Compiler** | GCC 11.4.0 |
+| **Build Flags** | `-std=c++20 -O3 -march=native -flto -fno-exceptions -fno-rtti` |
+| **NUMA** | Single-node (1 socket) |
+
+The Ryzen 9 7900X's Zen 4 architecture is well-suited for low-latency workloads: large per-core L2 cache (1 MiB) reduces cache misses on hot data structures, and the high single-thread boost clock (5.73 GHz) minimizes per-operation latency.
+
 ## Targets vs. Achieved
 
 | Metric | Target | Achieved | Status |

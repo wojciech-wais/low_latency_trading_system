@@ -14,6 +14,21 @@ A production-grade High-Frequency Trading (HFT) simulator built in modern C++20,
 | Market Data Throughput | 1M msgs/sec | **656K msgs/sec** (full pipeline) |
 | Book Updates | 500K/sec | **656K/sec** |
 
+### Benchmark Environment
+
+| Component | Specification |
+|-----------|--------------|
+| **CPU** | AMD Ryzen 9 7900X (12 cores / 24 threads, up to 5.73 GHz boost) |
+| **Architecture** | Zen 4, x86_64 |
+| **L1 Cache** | 384 KiB I + 384 KiB D (per-core: 32 KiB each) |
+| **L2 Cache** | 12 MiB (1 MiB per core) |
+| **L3 Cache** | 64 MiB (2 x 32 MiB CCDs) |
+| **RAM** | 64 GB DDR5 |
+| **OS** | Ubuntu 22.04.5 LTS |
+| **Kernel** | 6.5.0-26-generic |
+| **Compiler** | GCC 11.4.0 |
+| **Build Flags** | `-std=c++20 -O3 -march=native -flto -fno-exceptions -fno-rtti` |
+
 ## Architecture
 
 ```
