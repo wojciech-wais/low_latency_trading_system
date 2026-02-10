@@ -1,0 +1,36 @@
+baseURL = "https://wojciech-wais.github.io/low-latency-trading-system/"
+languageCode = "en-us"
+title = "Ultra-Low Latency HFT Simulator"
+theme = "papermod"
+
+[params]
+  description = "A production-grade High-Frequency Trading simulator in C++20 with sub-microsecond order processing"
+  author = "Wojciech Wais"
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    style = "monokai"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Architecture"
+  url = "/architecture/"
+  weight = 2
+
+[[menu.main]]
+  name = "Performance"
+  url = "/performance/"
+  weight = 3
+
+[[menu.main]]
+  name = "Deep Dive"
+  url = "/deep-dive/"
+  weight = 4

@@ -1,0 +1,36 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Ultra-Low Latency<br>HFT Simulator</h1>
+    <p class="hero-subtitle">A production-grade High-Frequency Trading simulator built in modern C++20</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">1.6<span class="stat-unit">&mu;s</span></span>
+        <span class="stat-label">Tick-to-Trade p50</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">21<span class="stat-unit">ns</span></span>
+        <span class="stat-label">Risk Check p99</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">656K<span class="stat-unit">/sec</span></span>
+        <span class="stat-label">Book Updates</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Hot-Path Allocations</span>
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a href="{{ "architecture/" | relURL }}" class="btn btn-primary">System Architecture</a>
+      <a href="{{ "deep-dive/" | relURL }}" class="btn btn-secondary">Technical Deep Dive</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-content">
+    {{ .Content }}
+  </div>
+</section>
+{{ end }}
